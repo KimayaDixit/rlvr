@@ -176,9 +176,9 @@ class BrowserRLVREnv(gym.Env):
         elif name == "select":
             option = str(args[1])
             try:
-                locator.select_option(value=option, timeout=1500)
+                locator.select_option(value=option, timeout=3000)
             except Exception:
-                locator.select_option(label=option, timeout=1500)
+                locator.select_option(label=option, timeout=3000)
 
     @staticmethod
     def _parse_args(raw: str) -> list[str]:
